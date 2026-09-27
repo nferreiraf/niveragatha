@@ -384,7 +384,13 @@ body:after{
             <option value="Goneli">Goneli</option>
             <option value="Julio Cesar">Julio Cesar</option>
             <option value="Ellen">Ellen</option>
-          </select>
+          
+    <option value="Robert">Robert</option>
+    <option value="Isadora e Martins">Isadora e Martins</option>
+    <option value="Julia">Julia</option>
+    <option value="Lola">Lola</option>
+    <option value="João Oliveira">João Oliveira</option>
+    <option value="Dinda e Dindo">Dinda e Dindo</option></select>
           <div class="btns">
             <button class="btn" id="whatsapp">💌 CONFIRMAR MINHA PRESENÇA</button>
           </div>
@@ -492,11 +498,17 @@ function countdown(){
 countdown(); setInterval(countdown,1000);
 
 document.getElementById('whatsapp').addEventListener('click',()=>{
-  const name=document.getElementById('guest').value;
-  if(!name){alert('Selecione seu nome primeiro.');return}
-  if(!guests[name]){alert('O número da Goneli ainda não foi cadastrado. Assim que você tiver o número, eu atualizo o convite.');return}
-  const phone=guests[name].replace(/\D/g,'');
-  const msg=`Olá! 💜 Eu, ${name}, confirmo minha ilustre presença na estreia do capítulo 18 da Agatha Naély, dia 05/12/2026 às 18h30. ✨`;
+  const name = document.getElementById('guest').value;
+
+  if(!name){
+    alert('Selecione seu nome primeiro.');
+    return;
+  }
+
+  const phone = "5515988156658";
+
+  const msg = `Olá! 💜 Eu, ${name}, confirmo minha ilustre presença na estreia do capítulo 18 da Agatha Naély, dia 05/12/2026 às 18h30. ✨`;
+
   location.href = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
 });
 
