@@ -338,7 +338,7 @@ body:after{
         <div class="section-title"><small>CAPÍTULO 18</small><h2>A celebração</h2></div>
         <div class="card details">
           <div class="detail"><strong>DATA</strong>05 de dezembro de 2026</div>
-          <div class="detail"><strong>HORÁRIO</strong>18h30</div>
+          <div class="detail"><strong>HORÁRIO</strong>17h30</div>
           <div class="detail full"><strong>LOCAL</strong>Giardino di Veneto<br><span style="color:#cfc2dc">Rua José Carlos Pedrico, 466</span></div>
         </div>
         <div class="btns">
@@ -390,7 +390,11 @@ body:after{
     <option value="Julia">Julia</option>
     <option value="Lola">Lola</option>
     <option value="João Oliveira">João Oliveira</option>
-    <option value="Dinda e Dindo">Dinda e Dindo</option></select>
+    <option value="Dinda e Dindo">Dinda e Dindo</option>
+    <option value="Taynara e Everton">Taynara e Everton</option>
+    <option value="Vera e Igor">Vera e Igor</option>
+    <option value="Iânica e David">Iânica e David</option>
+    <option value="Fernando e Elis">Fernando e Elis</option></select>
           <div class="btns">
             <button class="btn" id="whatsapp">💌 CONFIRMAR MINHA PRESENÇA</button>
           </div>
@@ -483,7 +487,7 @@ musicBtn.addEventListener('click',()=>{
   }
 });
 
-const target = new Date('2026-12-05T18:30:00-03:00').getTime();
+const target = new Date('2026-12-05T17:30:00-03:00').getTime();
 function countdown(){
   let diff=Math.max(0,target-Date.now());
   const d=Math.floor(diff/86400000); diff%=86400000;
@@ -499,16 +503,12 @@ countdown(); setInterval(countdown,1000);
 
 document.getElementById('whatsapp').addEventListener('click',()=>{
   const name = document.getElementById('guest').value;
-
   if(!name){
     alert('Selecione seu nome primeiro.');
     return;
   }
-
   const phone = "5515988156558";
-
-  const msg = `Olá! 💜 Eu, ${name}, confirmo minha ilustre presença na estreia do capítulo 18 da Agatha Naély, dia 05/12/2026 às 18h30. ✨`;
-
+  const msg = `Olá! 💜 Eu, ${name}, confirmo minha ilustre presença na estreia do capítulo 18 da Agatha Naély, dia 05/12/2026 às 17h30. ✨`;
   location.href = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
 });
 
